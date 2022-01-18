@@ -5,27 +5,21 @@ import me.mingshan.markdown4j.encoder.element.ElementEncoder;
 import me.mingshan.markdown4j.encoder.element.ElementEncoderFactory;
 
 /**
- * 图片元素：
- *
- * <pre>
- *     ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
- * </pre>
- *
  * @author hanjuntao
- * @date 2022/1/17
+ * @date 2022/1/18
  */
 @Data
-public class ImageElement implements Element {
-    private String imageUrl;
+public class InlineCodeElement implements Element {
+    private String content;
 
     @Override
     public String toMd() {
-        ElementEncoder encoder = ElementEncoderFactory.getEncoder(ElementType.IMAGE);
+        ElementEncoder encoder = ElementEncoderFactory.getEncoder(ElementType.INLINE_CODE);
         return encoder.encode(this);
     }
 
     @Override
     public ElementType getType() {
-        return ElementType.IMAGE;
+        return ElementType.INLINE_CODE;
     }
 }

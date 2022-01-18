@@ -39,8 +39,14 @@ public class Markdown {
         return this;
     }
 
-    public void build() {
+    public String build() {
         // 形成字符串
-        return;
+        StringBuilder result = new StringBuilder();
+
+        for (Block block : blocks) {
+            result.append(block.toMd());
+        }
+
+        return result.toString();
     }
 }

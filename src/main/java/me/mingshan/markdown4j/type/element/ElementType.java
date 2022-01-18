@@ -7,6 +7,10 @@ package me.mingshan.markdown4j.type.element;
  * @date 2022/1/17
  */
 public enum ElementType {
+    STRING,
     URL,
-    IMAGE
+    IMAGE,
+    BOLD,
+    ITALIC,
+    INLINE_CODE
 }

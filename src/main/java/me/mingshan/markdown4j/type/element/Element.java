@@ -7,5 +7,7 @@ package me.mingshan.markdown4j.type.element;
  * @date 2022/1/17
  */
 public interface Element {
+    String toMd();
+
     ElementType getType();
 }

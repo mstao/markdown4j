@@ -2,6 +2,8 @@ package me.mingshan.markdown4j.type.block;
 
 import lombok.Builder;
 import lombok.Data;
+import me.mingshan.markdown4j.encoder.block.BlockEncoder;
+import me.mingshan.markdown4j.encoder.block.BlockEncoderFactory;
 
 import java.util.List;
 
@@ -27,6 +29,12 @@ public class TableBlock implements Block {
     @Override
     public BlockType getType() {
         return BlockType.TABLE;
+    }
+
+    @Override
+    public String toMd() {
+        BlockEncoder encoder = BlockEncoderFactory.getEncoder(BlockType.TABLE);
+        return encoder.encode(this);
     }
 
     @Data

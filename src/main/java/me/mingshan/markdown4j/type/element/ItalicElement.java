@@ -5,27 +5,27 @@ import me.mingshan.markdown4j.encoder.element.ElementEncoder;
 import me.mingshan.markdown4j.encoder.element.ElementEncoderFactory;
 
 /**
- * 图片元素：
+ * 斜体
  *
  * <pre>
- *     ![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+ *     _斜体字_
  * </pre>
  *
  * @author hanjuntao
- * @date 2022/1/17
+ * @date 2022/1/18
  */
 @Data
-public class ImageElement implements Element {
-    private String imageUrl;
+public class ItalicElement implements Element {
+    private String content;
 
     @Override
     public String toMd() {
-        ElementEncoder encoder = ElementEncoderFactory.getEncoder(ElementType.IMAGE);
+        ElementEncoder encoder = ElementEncoderFactory.getEncoder(ElementType.ITALIC);
         return encoder.encode(this);
     }
 
     @Override
     public ElementType getType() {
-        return ElementType.IMAGE;
+        return ElementType.ITALIC;
     }
 }

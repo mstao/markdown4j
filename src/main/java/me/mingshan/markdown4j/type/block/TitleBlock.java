@@ -2,6 +2,8 @@ package me.mingshan.markdown4j.type.block;
 
 import lombok.Builder;
 import lombok.Data;
+import me.mingshan.markdown4j.encoder.block.BlockEncoder;
+import me.mingshan.markdown4j.encoder.block.BlockEncoderFactory;
 
 /**
  * 标题块
@@ -26,6 +28,12 @@ public class TitleBlock implements Block {
     @Override
     public BlockType getType() {
         return BlockType.TITLE;
+    }
+
+    @Override
+    public String toMd() {
+        BlockEncoder encoder = BlockEncoderFactory.getEncoder(BlockType.TITLE);
+        return encoder.encode(this);
     }
 
     /**

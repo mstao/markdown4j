@@ -2,6 +2,8 @@ package me.mingshan.markdown4j.type.block;
 
 import lombok.Builder;
 import lombok.Data;
+import me.mingshan.markdown4j.encoder.block.BlockEncoder;
+import me.mingshan.markdown4j.encoder.block.BlockEncoderFactory;
 
 /**
  * 代码块
@@ -27,6 +29,12 @@ public class CodeBlock implements Block {
         return BlockType.CODE;
     }
 
+    @Override
+    public String toMd() {
+        BlockEncoder encoder = BlockEncoderFactory.getEncoder(BlockType.CODE);
+        return encoder.encode(this);
+    }
+
     /**
      * 语言
      *
@@ -35,7 +43,7 @@ public class CodeBlock implements Block {
      */
     public enum Language {
         JAVA("JAVA"),
-        C("JAVA"),
+        C("C"),
         CPLUSPLUS("C++"),
         JAVASCRIPT("JAVASCRIPT");
 

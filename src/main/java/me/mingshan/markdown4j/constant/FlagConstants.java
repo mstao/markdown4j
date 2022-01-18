@@ -11,8 +11,10 @@ public class FlagConstants {
 
     public static final String REFERENCE_BLOCK_FLAG = ">";
 
-
-
     public static final String INLINE_CODE_FLAG = "`";
+
+    public static final String SPACE = " ";
+
+    public static final String LINE_BREAK = "<br/>";
 
 }

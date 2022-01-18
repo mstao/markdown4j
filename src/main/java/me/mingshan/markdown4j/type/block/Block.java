@@ -21,5 +21,7 @@ package me.mingshan.markdown4j.type.block;
  * @date 2022/1/17
  */
 public interface Block {
+    String toMd();
+
     BlockType getType();
 }

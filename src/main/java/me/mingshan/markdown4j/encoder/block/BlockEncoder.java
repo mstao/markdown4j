@@ -1,4 +1,4 @@
-package me.mingshan.markdown4j.compiler.block;
+package me.mingshan.markdown4j.encoder.block;
 
 import me.mingshan.markdown4j.type.block.Block;
 import me.mingshan.markdown4j.type.block.BlockType;
@@ -9,14 +9,14 @@ import me.mingshan.markdown4j.type.block.BlockType;
  * @author hanjuntao
  * @date 2022/1/17
  */
-public interface BlockCompiler {
+public interface BlockEncoder {
     /**
      * 编译
      *
      * @param block java代码
      * @return markdown语法字符串
      */
-    String compile(Block block);
+    String encode(Block block);
 
     /**
      * 返回块类型
