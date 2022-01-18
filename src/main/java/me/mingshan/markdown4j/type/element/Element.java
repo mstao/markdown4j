@@ -1,5 +1,7 @@
 package me.mingshan.markdown4j.type.element;
 
+import me.mingshan.markdown4j.type.block.StringBlock;
+
 /**
  * 元素
  *
@@ -10,4 +12,8 @@ public interface Element {
     String toMd();
 
     ElementType getType();
+
+    default StringBlock toBlock() {
+        return StringBlock.builder().content(toMd()).build();
+    }
 }

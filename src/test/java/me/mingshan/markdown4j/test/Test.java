@@ -2,7 +2,9 @@ package me.mingshan.markdown4j.test;
 
 import me.mingshan.markdown4j.Markdown;
 import me.mingshan.markdown4j.type.block.CodeBlock;
+import me.mingshan.markdown4j.type.block.StringBlock;
 import me.mingshan.markdown4j.type.block.TableBlock;
+import me.mingshan.markdown4j.type.element.ImageElement;
 import me.mingshan.markdown4j.writer.MdWriter;
 
 import java.io.IOException;
@@ -33,10 +35,15 @@ public class Test {
                 .rows(rows)
                 .build();
 
+        StringBlock imageBlock = ImageElement.builder()
+                .imageUrl("https://pandao.github.io/editor.md/examples/images/7.jpg")
+                .build().toBlock();
+
         Markdown markdown = Markdown.builder()
                 .name("测试文档")
                 .block(codeBlock)
                 .block(tableBlock)
+                .block(imageBlock)
                 .build();
 
         MdWriter.write(markdown);

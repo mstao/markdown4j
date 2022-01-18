@@ -11,5 +11,5 @@ public enum BlockType {
     REFERENCE,
     TABLE,
     TITLE,
-
+    STRING
 }

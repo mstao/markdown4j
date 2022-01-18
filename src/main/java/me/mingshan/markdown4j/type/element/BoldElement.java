@@ -1,5 +1,6 @@
 package me.mingshan.markdown4j.type.element;
 
+import lombok.Builder;
 import lombok.Data;
 import me.mingshan.markdown4j.encoder.element.ElementEncoder;
 import me.mingshan.markdown4j.encoder.element.ElementEncoderFactory;
@@ -10,6 +11,7 @@ import me.mingshan.markdown4j.encoder.element.ElementEncoderFactory;
  * @author hanjuntao
  * @date 2022/1/18
  */
+@Builder
 @Data
 public class BoldElement implements Element {
     private String content;
