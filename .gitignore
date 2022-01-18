@@ -1,5 +1,6 @@
 # Compiled class file
 *.class
+target
 
 # Log file
 *.log
@@ -11,8 +12,8 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
+*.jar
 *.nar
 *.ear
 *.zip
@@ -21,3 +22,24 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+.classpath
+.project
+.settings
+
+### Custom ###
+*.bak
+internal-server/src/main/resources/test.properties
+internal-db-setup/src/main/assembly/test.sh
+build-jenkins-cli.sh
+build.sh
+build-test.sh
+change_log.txt
+deploy.sh
