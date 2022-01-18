@@ -1,5 +1,6 @@
-package me.mingshan.markdown4j;
+package org.example;
 
+import me.mingshan.markdown4j.Markdown;
 import me.mingshan.markdown4j.type.block.CodeBlock;
 import me.mingshan.markdown4j.type.block.TableBlock;
 
