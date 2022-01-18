@@ -1,9 +1,11 @@
-package org.example;
+package me.mingshan.markdown4j.test;
 
 import me.mingshan.markdown4j.Markdown;
 import me.mingshan.markdown4j.type.block.CodeBlock;
 import me.mingshan.markdown4j.type.block.TableBlock;
+import me.mingshan.markdown4j.writer.MdWriter;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,7 +15,7 @@ import java.util.List;
  * @date 2022/1/17
  */
 public class Test {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         CodeBlock codeBlock = CodeBlock.builder()
                 .language(CodeBlock.Language.JAVA.getDesc())
                 .content("function test() {\n" +
@@ -31,12 +33,12 @@ public class Test {
                 .rows(rows)
                 .build();
 
-        String result = Markdown.builder()
+        Markdown markdown = Markdown.builder()
                 .name("测试文档")
-                .addBlock(codeBlock)
-                .addBlock(tableBlock)
+                .block(codeBlock)
+                .block(tableBlock)
                 .build();
 
-        System.out.println(result);
+        MdWriter.write(markdown);
     }
 }
