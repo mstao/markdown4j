@@ -7,7 +7,7 @@ https://commonmark.org/
 # maven
 
 ```
- <dependency>
+<dependency>
   <groupId>fun.mingshan</groupId>
   <artifactId>markdown4j</artifactId>
   <version>1.0</version>
