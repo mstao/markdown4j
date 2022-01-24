@@ -1,4 +1,7 @@
 # markdown4j
+[![Build Status](https://github.com/mstao/markdown4j/build/badge.svg?branch=main)](https://github.com/mstao/markdown4j/actions)
+[![license](https://img.shields.io/github/license/seata/seata.svg?style=flat-square)](https://www.apache.org/licenses/LICENSE-2.0.html)
+[![maven](https://img.shields.io/maven-central/v/fun.mingshan/markdown4j?style=flat-square)](https://search.maven.org/search?q=fun.mingshan)
 
 Use java to generate markdown file.
 
