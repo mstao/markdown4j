@@ -4,6 +4,16 @@ Use java to generate markdown file.
 
 https://commonmark.org/
 
+# maven
+
+```
+ <dependency>
+  <groupId>fun.mingshan</groupId>
+  <artifactId>markdown4j</artifactId>
+  <version>1.0</version>
+</dependency>
+```
+
 # How to use?
 
 ```Java
