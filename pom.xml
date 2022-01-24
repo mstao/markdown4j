@@ -5,7 +5,7 @@
 
   <groupId>fun.mingshan</groupId>
   <artifactId>markdown4j</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
 
   <name>markdown4j</name>
   <description>To solve the problem of not quickly generating Markdown files at the Java level, using builder mode, very simple to use.</description>
@@ -35,7 +35,7 @@
     <connection>scm:git:https://github.com/mstao/markdown4j.git</connection>
     <developerConnection>scm:git:https://github.com/mstao/markdown4j.git</developerConnection>
     <url>https://github.com/mstao/markdown4j</url>
-    <tag>v1.0</tag>
+    <tag>${project.version}</tag>
   </scm>
 
   <inceptionYear>2022</inceptionYear>
